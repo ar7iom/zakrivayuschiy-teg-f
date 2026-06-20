@@ -1,1 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /*Глобальные настройки страницы*/
+  --page-font-size: 18px;
+  --border-size: 2px;
+  --content-inline-size: clamp(20.833rem, 3.605rem + 82.697vw, 38.889rem);
+  
+  /*Типографика*/
+  --font-family-main: 'Inter-Variable';
+  --font-family-accent: 'PressStart2P-Regular';
+  --main-heading-font-size: clamp(0.7778rem, 0.3007rem + 2.2901vw, 1.2778rem);
+  --main-heading-accent-font-size: clamp(2.7222rem, 1.874rem + 4.0712vw, 3.6111rem);
+  
+  /*Свойства вариативного шрифта*/
+  --wght-heading: 715;
+  --wght-main: 410;
+  
+  /*Цвета*/
+  --color-background: #fff;
+  --color-main: #000;
+  --color-label-border: #fff;
+}
