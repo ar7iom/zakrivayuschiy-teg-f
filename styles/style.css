@@ -11,67 +11,90 @@
 */
 
 .page {
+  font-family: var(--font-family-main, "Inter-Variable"), sans-serif;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(0deg, #1a1a1a 0%, #e7e7e7 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   inline-size: 100%;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-family-main, 'Inter-Variable'), sans-serif;
-  font-variation-settings: 'wght' var(--wght-main, 410);
-  background-image: repeating-linear-gradient(0deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
-                    repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
-                    linear-gradient(0deg, #1a1a1a 0%, #e7e7e7 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  font-variation-settings: "wght" var(--wght-main, 410);
 }
 
-.header, .main {
-  inline-size: var(--content-inline-size, clamp(20.833rem, 3.605rem + 82.697vw, 38.889rem));
+.header,
+.main {
+  inline-size: var(
+    --content-inline-size,
+    clamp(20.833rem, 3.605rem + 82.697vw, 38.889rem)
+  );
 }
 
 .header {
-  block-size: clamp(327px, 47.9167vw, 368px);
-  background-color: var(--color-background, #fff);
-  margin: 100px auto 98px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 100px auto 98px;
+  background-color: var(--color-background, #fff);
+  block-size: clamp(327px, 47.9167vw, 368px);
 }
 
 .header__main-heading {
-  font-family: var(--font-family-accent, 'PressStart2P-Regular'), fantasy;
-  font-size: var(--main-heading-font-size, clamp(0.7778rem, 0.3007rem + 2.2901vw, 1.2778rem));
-  text-align: center;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  font-family: var(--font-family-accent, "PressStart2P-Regular"), fantasy;
+  font-size: var(
+    --main-heading-font-size,
+    clamp(0.7778rem, 0.3007rem + 2.2901vw, 1.2778rem)
+  );
+  text-align: center;
 }
 
 .header__main-heading span {
-  font-size: var(--main-heading-accent-font-size, clamp(2.7222rem, 1.874rem + 4.0712vw, 3.6111rem));
   display: inline-block;
+  font-size: var(
+    --main-heading-accent-font-size,
+    clamp(2.7222rem, 1.874rem + 4.0712vw, 3.6111rem)
+  );
 }
 
 .main {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  margin: 0 auto;
   padding-bottom: 100px;
 }
 
 .card {
-  background-color: var(--color-background, #fff);
   border: var(--border-size, 2px) solid var(--color-main, #000);
+  background-color: var(--color-background, #fff);
 }
 
 .card__heading {
   display: inline-block;
   padding: 5px 10px;
   font-size: inherit;
-  font-variation-settings: 'wght' var(--wght-heading, 715);
+  font-variation-settings: "wght" var(--wght-heading, 715);
 }
 
 .card__image {
@@ -79,8 +102,11 @@
   margin: 0;
   border-top: var(--border-size, 2px) solid var(--color-main, #000);
   border-bottom: var(--border-size, 2px) solid var(--color-main, #000);
-  max-block-size: calc(var(--content-inline-size, clamp(375px, 700px, 700px)) - (2 * var(--border-size, 2px)));
   overflow: hidden;
+  max-block-size: calc(
+    var(--content-inline-size, clamp(375px, 700px, 700px)) -
+      (2 * var(--border-size, 2px))
+  );
 }
 
 .card__image img {
@@ -89,19 +115,19 @@
 }
 
 .card__image figcaption {
-  display: inline;
   position: absolute;
-  text-transform: uppercase;
   top: 25px;
   right: 25px;
+  display: inline;
   opacity: 0.5;
+  font-family: var(--font-family-accent, "PressStart2P-Regular"), fantasy;
   font-size: 14px;
-  font-family: var(--font-family-accent, 'PressStart2P-Regular'), fantasy;
-  text-shadow: 
-    -1px -1px 0 var(--color-label-border, #fff),  
-     1px -1px 0 var(--color-label-border, #fff),
-    -1px  1px 0 var(--color-label-border, #fff),  
-     1px  1px 0 var(--color-label-border, #fff);
+  text-transform: uppercase;
+  text-shadow:
+    -1px -1px 0 var(--color-label-border, #fff),
+    1px -1px 0 var(--color-label-border, #fff),
+    -1px 1px 0 var(--color-label-border, #fff),
+    1px 1px 0 var(--color-label-border, #fff);
   mix-blend-mode: hard-light;
 }
 
@@ -109,11 +135,12 @@
   .card__image figcaption {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--color-label-border, #fff);
-    paint-order: stroke fill; 
-  } 
+    paint-order: stroke fill;
+  }
 }
 
-.card__content, .card__content-text {
+.card__content,
+.card__content-text {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -127,26 +154,36 @@
 .card__button {
   display: flex;
   align-items: center;
+  gap: 7px;
 }
 
 .button {
-  background-color: var(--color-background, #fff);
-  border: var(--border-size, 2px) solid var(--color-main, #000);
-  padding: 0;
-  margin: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  border: var(--border-size, 2px) solid var(--color-main, #000);
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--color-background, #fff);
+  transition:
+    box-shadow 0.3s ease,
+    border 0.3s ease;
   cursor: pointer;
 }
 
-.button, .save-modal__text {
-  font-family: var(--font-family-accent, 'PressStart2P-Regular');
+.button__text {
+  color: var(--color-background, #fff);
+  font-family: var(--font-family-accent, "PressStart2P-Regular");
   font-size: 14px;
+  mix-blend-mode: difference;
 }
 
 .card__icon-button {
-  border: none;
+  border-color: transparent;
+  inline-size: 38px;
+  block-size: 38px;
 }
 
 .card__like-button {
@@ -155,8 +192,36 @@
 }
 
 .save-button {
-  padding: 15px 20px;
   gap: 8px;
+  padding: 15px 20px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:not(.card__icon-button):focus-visible {
+  box-shadow: 2px 2px 0 var(--color-main, #000);
+}
+
+.button:is(.card__icon-button):focus-visible {
+  border-color: var(--color-main, #000);
+}
+
+.button:not(.card__icon-button)::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  display: block;
+  background-color: var(--color-main, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:not(.card__icon-button):hover::before {
+  transform: translateX(0);
 }
 
 .save-modal {
@@ -164,19 +229,19 @@
 }
 
 .save-modal[open] {
-  inline-size: calc(100% - 34px);
-  max-inline-size: 353px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 30px;
   border: var(--border-size, 2px) solid var(--color-main, #000);
+  padding: 30px;
   background-color: var(--color-background, #fff);
+  inline-size: calc(100% - 34px);
+  max-inline-size: 353px;
 }
 
 .save-modal[open]::backdrop {
-  background-color: var(--color-main, #000);
   opacity: 0.75;
+  background-color: var(--color-main, #000);
 }
 
 .save-modal__content {
@@ -193,6 +258,66 @@
 
 .save-modal__button {
   min-block-size: 38px;
+}
+
+/*Начальные значения для сердца*/
+.heart,
+.sparks {
+  transform-origin: center;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/*Эффекты для анимации сердца*/
+
+.contour {
+  transition: fill 0.1s linear 0s;
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .core {
+  fill: var(--color-main, #000);
+  transition-delay: 0s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-heart-fill, #000);
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .core,
+.like-icon.is-liked .core {
+  fill: var(--color-heart-animation-fill, #ff0000);
+  transition-delay: 0s;
+}
+
+.like-icon:active .main-body,
+.like-icon.is-liked .main-body {
+  fill: var(--color-heart-animation-fill, #ff0000);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-heart-animation-fill, #ff0000);
+  transition-delay: 0.06s;
+  transition-duration: 0.3s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s forwards;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-flash 0.3s ease-in 0.3s forwards;
 }
 
 /*Фильтры*/
@@ -224,9 +349,9 @@
 .hard-light {
   filter: contrast(1.2) saturate(1.2) brightness(1.1);
 }
+
 /*Адаптив под смартфон*/
 @media (width <= 375px) {
-  
   .header {
     margin: 100px auto;
   }
@@ -238,5 +363,4 @@
   .save-modal[open] {
     padding: 30px 40px;
   }
-
 }
