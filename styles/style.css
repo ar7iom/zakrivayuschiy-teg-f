@@ -195,6 +195,35 @@
   min-block-size: 38px;
 }
 
+/*Фильтры*/
+
+.sepia {
+  filter: sepia(0.5);
+}
+
+.bright {
+  filter: brightness(1.2);
+}
+
+.low_saturate {
+  filter: saturate(0.75);
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.soft-light {
+  filter: hue-rotate(340deg) grayscale(0.5);
+}
+
+.warm-evening {
+  filter: sepia(0.5) saturate(1.5);
+}
+
+.hard-light {
+  filter: contrast(1.2) saturate(1.2) brightness(1.1);
+}
 /*Адаптив под смартфон*/
 @media (width <= 375px) {
   
