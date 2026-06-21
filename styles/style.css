@@ -61,7 +61,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  font-family: var(--font-family-accent, "PressStart2P-Regular"), fantasy;
+  font-family: var(--font-family-accent, "PressStart2P"), fantasy;
   font-size: var(
     --main-heading-font-size,
     clamp(0.7778rem, 0.3007rem + 2.2901vw, 1.2778rem)
@@ -124,7 +124,7 @@
   right: 25px;
   display: inline;
   opacity: 0.5;
-  font-family: var(--font-family-accent, "PressStart2P-Regular"), fantasy;
+  font-family: var(--font-family-accent, "PressStart2P"), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   text-shadow:
@@ -179,7 +179,7 @@
 
 .button__text {
   color: var(--color-background, #fff);
-  font-family: var(--font-family-accent, "PressStart2P-Regular");
+  font-family: var(--font-family-accent, "PressStart2P");
   font-size: 14px;
   mix-blend-mode: difference;
 }
@@ -260,6 +260,12 @@
   min-block-size: 39px;
 }
 
+.save-modal__text {
+  color: var(--color-main, #000);
+  font-family: var(--font-family-accent, "PressStart2P");
+  font-size: 14px;
+}
+
 .save-modal__button {
   min-block-size: 38px;
 }
@@ -282,38 +288,39 @@
 
 .core {
   transition: fill 0.3s linear 0.03s;
+  fill: transparent;
 }
 
 .main-body {
   transition: fill 0.3s linear 0s;
+  fill: transparent;
 }
 
 .like-icon:hover .core {
   fill: var(--color-main, #000);
-  transition-delay: 0s;
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon:hover .main-body {
   fill: var(--color-heart-fill, #000);
-  transition-delay: 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:active .core,
 .like-icon.is-liked .core {
   fill: var(--color-heart-animation-fill, #ff0000);
-  transition-delay: 0s;
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon:active .main-body,
 .like-icon.is-liked .main-body {
   fill: var(--color-heart-animation-fill, #ff0000);
-  transition-delay: 0.05s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--color-heart-animation-fill, #ff0000);
-  transition-delay: 0.06s;
-  transition-duration: 0.3s;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .heart {
@@ -367,6 +374,11 @@
 
   .save-button {
     flex-direction: column;
+  }
+
+  .save-button svg {
+    inline-size: 28px;
+    block-size: 28px;
   }
 
   .save-modal[open] {
