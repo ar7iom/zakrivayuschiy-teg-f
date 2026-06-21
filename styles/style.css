@@ -352,6 +352,11 @@
 
 /*Адаптив под смартфон*/
 @media (width <= 375px) {
+  .header,
+  .main {
+    inline-size: 100%;
+  }
+
   .header {
     margin: 100px auto;
   }
