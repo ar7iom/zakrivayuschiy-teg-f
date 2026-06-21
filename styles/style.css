@@ -50,6 +50,7 @@
   justify-content: center;
   align-items: center;
   margin: 100px auto 98px;
+  border: var(--border-size, 2px) solid var(--color-main, #000);
   background-color: var(--color-background, #fff);
   block-size: clamp(327px, 47.9167vw, 368px);
 }
@@ -104,7 +105,10 @@
   border-bottom: var(--border-size, 2px) solid var(--color-main, #000);
   overflow: hidden;
   max-block-size: calc(
-    var(--content-inline-size, clamp(20.833rem, 3.605rem + 82.697vw, 38.889rem)) -
+    var(
+        --content-inline-size,
+        clamp(20.833rem, 3.605rem + 82.697vw, 38.889rem)
+      ) -
       (2 * var(--border-size, 2px))
   );
   aspect-ratio: 1 / 1;
