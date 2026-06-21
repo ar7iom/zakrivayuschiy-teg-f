@@ -104,14 +104,14 @@
   border-bottom: var(--border-size, 2px) solid var(--color-main, #000);
   overflow: hidden;
   max-block-size: calc(
-    var(--content-inline-size, clamp(375px, 700px, 700px)) -
+    var(--content-inline-size, clamp(20.833rem, 3.605rem + 82.697vw, 38.889rem)) -
       (2 * var(--border-size, 2px))
   );
+  aspect-ratio: 1 / 1;
 }
 
 .card__image img {
   max-inline-size: 100%;
-  aspect-ratio: 1 / 1;
 }
 
 .card__image figcaption {
@@ -359,6 +359,10 @@
 
   .header {
     margin: 100px auto;
+  }
+
+  .card__image {
+
   }
 
   .save-button {
