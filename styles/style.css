@@ -252,6 +252,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
   gap: 20px;
 }
 
@@ -264,6 +265,8 @@
   color: var(--color-main, #000);
   font-family: var(--font-family-accent, "PressStart2P");
   font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .save-modal__button {
@@ -287,13 +290,13 @@
 }
 
 .core {
-  transition: fill 0.3s linear 0.03s;
   fill: transparent;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .main-body {
-  transition: fill 0.3s linear 0s;
   fill: transparent;
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon:hover .core {
